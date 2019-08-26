@@ -67,5 +67,16 @@ var o1 = { a: 1 };
 var o2 = { [Symbol('foo')]: 2 };
 
 var obj = Object.assign({}, o1, o2);
-console.log(obj);
+// console.log(obj);
 Object.getOwnPropertySymbols(obj);
+
+var Player = {score: 1, name: 'Jeff'};
+var newPlayer = Object.assign({}, Player, {score: 2});
+console.log(Player);
+console.log(newPlayer);
+
+newPlayer = {...Player};
+console.log(newPlayer);
+
+newPlayer = {...Player, score: 4};
+console.log(newPlayer);
